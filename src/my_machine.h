@@ -27,7 +27,7 @@
 //#define BOARD_BTT_SKR_14_TURBO
 //#define BOARD_BTT_SKR_E3_TURBO  // With onboard Trinamic TNMC2209 drivers. NOTE: not verified!
 //#define BOARD_MKS_SBASE_13
-//#define BOARD_MY_MACHINE // Add my_machine_map.h before enabling this!
+#define BOARD_MY_MACHINE // Add my_machine_map.h before enabling this!
 
 // Configuration
 // Uncomment to enable, for some a value > 1 may be assigned, if so the default value is shown.
@@ -56,9 +56,9 @@
 //#define TRINAMIC_ENABLE       2209 // Uncomment to enable Trinamic TMC2209 driver support. NOTE: Experimental for now, currently for SKR 1.x boards only
 //#define TRINAMIC_ENABLE       5160 // Uncomment to enable Trinamic TMC5160 driver support. NOTE: Experimental for now, currently for SKR E3 Turbo board only
 //#define LIMIT_MAX_ENABLE         1 // Uncomment to enable max limit input pins (when available)
-//#define EEPROM_ENABLE           16 // I2C EEPROM/FRAM support. Set to 16 for 2K, 32 for 4K, 64 for 8K, 128 for 16K and 256 for 16K capacity.
+#define EEPROM_ENABLE          512 // I2C EEPROM/FRAM support. Set to 16 for 2K, 32 for 4K, 64 for 8K, 128 for 16K and 256 for 16K capacity.
 //#define EEPROM_IS_FRAM          1 // Uncomment when EEPROM is enabled and chip is FRAM, this to remove write delay.
-#define ESTOP_ENABLE             0 // When enabled only real-time report requests will be executed when the reset pin is asserted.
+#define ESTOP_ENABLE             1 // When enabled only real-time report requests will be executed when the reset pin is asserted.
                                    // Note: if commented out the default setting is determined from COMPATIBILITY_LEVEL.
 // Optional control signals:
 // These will be assigned to aux input pins. Use the $pins command to check which pins are assigned.
@@ -76,8 +76,8 @@
 // of axes can be enabled here.
 //#define X_GANGED            1
 //#define X_AUTO_SQUARE       1
-//#define Y_GANGED            1
-//#define Y_AUTO_SQUARE       1
+#define Y_GANGED            1
+#define Y_AUTO_SQUARE       1
 //#define Z_GANGED            1
 //#define Z_AUTO_SQUARE       1
 // For ganged axes the limit switch input (if available) can be configured to act as a max travel limit switch.

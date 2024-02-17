@@ -33,3 +33,6 @@ build
 
 .vscode/settings.json
 .vscode/c_cpp_properties.json
+/Debug/
+/Release/
+/BL_0x4000/
